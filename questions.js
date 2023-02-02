@@ -1,9 +1,187 @@
-
-
 var questions = [
+
+    {
+
+    category: "Movies",
+    question: "What was the highest grossing film of all time, prior to 'Avatar'?",
+    choices: ["Titanic", "Jurassic Park", "Star Wars: Episode IV - A New Hope", "The Lion King"],
+    correctAnswer: "Titanic",
+    imageUrl: "assets/1a.jpg",
+    correctUrl: "assets/1b.jpg",
+    answer: "The 1997 film 'Titanic' directed by James Cameron was the highest grossing film of all time, prior to 'Avatar'. The film, which starred Leonardo DiCaprio and Kate Winslet, was a huge commercial and critical success, winning 11 Academy Awards and grossing over $2 billion worldwide."
+    
+    },
     
     {
-        
+
+    category: "Movies",
+    question: "What was the first animated feature film produced by Pixar Animation Studios?",
+    choices: [ "Finding Nemo", "The Incredibles", "Monsters, Inc.", "Toy Story"],
+    correctAnswer: "Toy Story",
+    imageUrl: "assets/2a.jpg",
+    correctUrl: "assets/2b.jpeg",
+    answer: "The 1995 film 'Toy Story' was the first animated feature film produced by Pixar Animation Studios. Directed by John Lasseter, the film was a landmark in the field of computer-animated films and was a huge commercial success, grossing over $350 million worldwide."
+    
+    },
+    
+    {
+
+    category: "Movies",
+    question: "What was the first Marvel Cinematic Universe (MCU) film to be released?",
+    choices: ["Iron Man", "The Avengers", "Thor", "Captain America: The First Avenger"],
+    correctAnswer: "Iron Man",
+    imageUrl: "assets/3a.jpg",
+    correctUrl: "assets/3b.jpg",
+    answer: "The 2008 film 'Iron Man' was the first Marvel Cinematic Universe (MCU) film to be released. Directed by Jon Favreau, the film starred Robert Downey Jr. as Tony Stark/Iron Man and was a huge commercial success, grossing over $585 million worldwide."
+    
+    },
+    
+    {
+
+    category: "Movies",
+    question: "Who directed the movie 'Pulp Fiction'?",
+    choices: ["Martin Scorsese", "Quentin Tarantino",  "Steven Spielberg", "Francis Ford Coppola"],
+    correctAnswer: "Quentin Tarantino",
+    imageUrl: "assets/4a.png",
+    correctUrl: "assets/4b.jpg",
+    answer: "Quentin Tarantino directed the 1994 movie 'Pulp Fiction', which is widely considered one of the greatest films ever made. The film, which starred John Travolta, Uma Thurman, and Samuel L. Jackson, won the Palme d'Or at the Cannes Film Festival and was a huge critical and commercial success."
+    
+    },
+    
+    {
+
+    category: "Movies",
+    question: "What was the first Star Wars movie to be released?",
+    choices: [ "The Empire Strikes Back", "Return of the Jedi", "A New Hope", "The Phantom Menace"],
+    correctAnswer: "A New Hope",
+    imageUrl: "assets/5a.png",
+    correctUrl: "assets/5b.jpg",
+    answer: "The 1977 film 'A New Hope' was the first Star Wars movie to be released. Directed by George Lucas, the film was a huge critical and commercial success and it established the Star Wars franchise, which has since become one of the most successful and beloved movie franchises of all time."
+    
+    },
+
+    {
+
+    category: "Sports",
+    question: "Who won the first FIFA World Cup in 1930?",
+    choices: ["Uruguay", "Argentina", "Brazil", "Italy"],
+    correctAnswer: "Uruguay",
+    imageUrl: "assets/6a.jpg",
+    correctUrl: "assets/6b.jpg",
+    answer: "Uruguay won the first FIFA World Cup in 1930, which was hosted in Uruguay. The tournament, which is now held every four years, is the biggest single-event sporting competition in the world, with teams from all over the globe competing for the title of World Champions."
+    
+    },
+    
+    {
+
+    category: "Sports",
+    question: "What country has won the most Summer Olympics gold medals?",
+    choices: ["Russia", "China", "Great Britain", "United States"],
+    correctAnswer: "United States",
+    imageUrl: "assets/7a.png",
+    correctUrl: "assets/7b.jpg",
+    answer: "The United States has won the most Summer Olympics gold medals, with a total of 1,022 as of the 2016 Summer Olympics in Rio de Janeiro. The Summer Olympics, held every four years, is a multi-sport event featuring athletes from all over the world competing in a variety of sports."
+    
+    },
+    
+    {
+
+    category: "Sports",
+    question: "Which team has won the UEFA Champions League the most times?",
+    choices: ["Barcelona", "Manchester United", "Real Madrid", "Bayern Munich"],
+    correctAnswer: "Real Madrid",
+    imageUrl: "assets/8a.png",
+    correctUrl: "assets/8b.jpg",
+    answer: "Real Madrid has won the UEFA Champions League the most times, with 13 victories to their name. They have dominated the tournament, winning five times in a row from 1955-56 to 1959-60, and four times in five years from 2016-17 to 2019-20."
+    
+    },
+    
+    {
+
+    category: "Sports",
+    question: "How many NBA championships did Michael Jordan win during his career?",
+    choices: ["9", "7", "8", "6"],
+    correctAnswer: "6",
+    imageUrl: "assets/9a.jpg",
+    correctUrl: "assets/9b.jpg",
+    answer: "Michael Jordan won a total of 6 NBA championships during his career, all with the Chicago Bulls. He won his first championship in 1991, and went on to win five more in the 1990s, establishing himself as one of the greatest basketball players of all time."
+    
+    },
+    
+    {
+
+    category: "Sports",
+    question: "Who is the most decorated athlete at the Summer Olympics?",
+    choices: ["Usain Bolt", "Michael Phelps", "Larisa Latynina", "Carl Lewis"],
+    correctAnswer: "Michael Phelps",
+    imageUrl: "assets/10a.jpg",
+    correctUrl: "assets/10b.jpg",
+    answer: "Michael Phelps is the most decorated athlete in the history of the Summer Olympics, with a total of 23 gold medals, 3 silver medals, and 2 bronze medals across five different Olympic Games. Phelps has dominated the pool, breaking numerous world records and cementing his legacy as one of the greatest swimmers of all time."
+    
+    },
+
+    {
+
+    category: "Geography",
+    question: "What is the largest island in the world?",
+    choices: ["Borneo", "Greenland", "Madagascar", "Australia"],
+    correctAnswer: "Greenland",
+    imageUrl: "assets/11a.jpg",
+    correctUrl: "assets/11b.gif",
+    answer: "Greenland is the largest island in the world, covering an area of 836,330 square km. It is located in the North Atlantic and is part of the Kingdom of Denmark. Greenland has a rugged and beautiful landscape, with glaciers, fjords, and tundra, and it is also home to many unique and hardy species, such as the Arctic fox, the walrus, and the humpback whale."
+    
+    },
+    
+    {
+
+    category: "Geography",
+    question: "What is the deepest point in the ocean?",
+    choices: [ "Puerto Rico Trench", "Java Trench", "Mariana Trench", "Tonga Trench"],
+    correctAnswer: "Mariana Trench",
+    imageUrl: "assets/12a.jpg",
+    correctUrl: "assets/12b.jpg",
+    answer: "The Mariana Trench is the deepest point in the ocean, with a depth of 36,070 feet. It is located in the western Pacific, near the Mariana Islands, and is part of the longest volcanic arc in the world. The Mariana Trench is one of the least explored places on Earth, and it is home to many unique and mysterious species, such as the giant squid and the deep-sea snailfish."
+    
+    },
+    
+    {
+
+    category: "Geography",
+    question: "What British town got its name from its proximity to the Cam River?",
+    choices: ["Cramlington", "Camberley", "Cambridge", "Camden"],
+    correctAnswer: "Cambridge",
+    imageUrl: "assets/13a.jpg",
+    correctUrl: "assets/13b.jpg",
+    answer: "Cambridge is the British town that got its name from its proximity to the Cam River. Cambridge is a city located in the county of Cambridgeshire, England, and is famous for its world-renowned university, the University of Cambridge.",
+    
+    },
+    
+    {
+
+    category: "Geography",
+    question: "What is the smallest country in the world by land area?",
+    choices: ["Monaco", "San Marino", "Vatican City",  "Nauru"],
+    correctAnswer: "Vatican City",
+    imageUrl: "assets/14a.avif",
+    correctUrl: "assets/14b.jpg",
+    answer: "Vatican City is the smallest country in the world by land area, covering just 0.17 square miles. It is an independent city-state, surrounded by Rome, Italy, and it is the headquarters of the Roman Catholic Church. Vatican City has a rich cultural and religious heritage, and it is home to many famous landmarks, such as St. Peter's Basilica, the Sistine Chapel, and the Vatican Museums. Vatican City is also a sovereign nation, with its own government, army, and currency, and it is the smallest country in the world both by population and by land area."
+    
+    },
+    
+    {
+
+    category: "Geography",
+    question: "Which river has no bridges to cross over it?",
+    choices: ["Nile River", "Amazon River", "Yangtze River", "Yellow River"],
+    correctAnswer: "Amazon River",
+    imageUrl: "assets/15a.jpg",
+    correctUrl: "assets/15b.jpg",
+    answer: "The Amazon River surprisingly has no bridges to cross over it. The Amazon is the largest river by discharge volume in the world, flowing through nine countries in South America, and its width and swift currents make it difficult to build bridges.",
+    
+    },  
+
+    {
+    
     category: "Food", 
     question: "What is the most expensive restaurant in the world?", 
     choices: ["Ithaa Undersea – Maldives", "Aragawa – Tokoyo, Japan", "Guy Savoy – Paris, France", "Sublimotion – Ibiza, Spain"],
@@ -108,7 +286,8 @@ var questions = [
     correctUrl: "assets/24b.jpeg",
     answer: "No Time to Die features an Aston Martin V8 Saloon, similar to the one first seen in 1987's The Living Daylights. Launched a decade before Timothy Dalton's Bond debut, the V8 Saloon was both the fastest four-seat production car of its day and Britain's first true 'supercar."
     
-    }, 
+    },
+
     {
     
     category: "Cars", 
@@ -177,7 +356,10 @@ var questions = [
     correctAnswer: "Brain",
     imageUrl: "assets/30a.jpeg",
     correctUrl: "assets/30b.jpeg",
-    answer: "Brain. While the first computer virus (Creeper) was released on the ARPANET as a harmless experiment, the first computer virus to be released in the wild didn't have malicious intent either. Called 'Brain,' the program was created in 1986 by the Farooq Alvi brothers of Pakistan as a method to deter copying the medical software they wrote. It targeted IBM PCs and would replace a floppy disk's boot sector with a copy of the virus and flag the real boot sector as bad."}, 
+    answer: "Brain. While the first computer virus (Creeper) was released on the ARPANET as a harmless experiment, the first computer virus to be released in the wild didn't have malicious intent either. Called 'Brain,' the program was created in 1986 by the Farooq Alvi brothers of Pakistan as a method to deter copying the medical software they wrote. It targeted IBM PCs and would replace a floppy disk's boot sector with a copy of the virus and flag the real boot sector as bad."
+    
+    },
+
     {
     
     category: "Music", 
@@ -213,8 +395,6 @@ var questions = [
     answer: "The Weeknd. Currently, The Weeknd is the most-streamed artist on Spotify, with over 90.40 million monthly listeners (As of December 2022)."
     
     }, 
-    
-    
     
     {
     
@@ -311,8 +491,6 @@ var questions = [
 
     },
             
-            
-
     {
 
     category: "Politics",
@@ -324,7 +502,6 @@ var questions = [
     answer: "António Guterres is the current Secretary-General of the United Nations. He took office on January 1, 2017. Guterres is a former Prime Minister of Portugal, and served as High Commissioner for Refugees at the United Nations from 2005 to 2015. The Secretary-General is appointed by the General Assembly on the recommendation of the Security Council, and holds the position for a five-year, renewable term."
 
     },
-
                 
     {
 
@@ -336,8 +513,7 @@ var questions = [
     correctUrl: "assets/43b.jpg",
     answer: "New Zealand was the first country to grant women the right to vote in 1893. The right to vote for women was included in the Electoral Act of 1893, which was passed by the New Zealand Parliament. This made New Zealand the first self-governing country in the world in which all women had the right to vote in parliamentary elections. Women in New Zealand were also able to stand for office and vote in local body elections from the same year."
 
-    },
-    
+    },    
                     
     {
 
@@ -363,7 +539,6 @@ var questions = [
 
     },
             
-
     {
 
     category: "Architecture",
@@ -375,8 +550,6 @@ var questions = [
     answer: "As of 2021, the tallest building in the world is Burj Khalifa located in Dubai, United Arab Emirates. Burj Khalifa stands at 828 meters (2,722 feet) tall, it opened in 2010 and it held the title of the tallest building in the world for over a decade. It has 163 floors and it is used for residential, office and hotel space. The building was designed by Adrian Smith, of Skidmore, Owings & Merrill, and named after the president of the United Arab Emirates, Khalifa bin Zayed Al Nahyan."
 
     },
-
-
 
     {
 
@@ -401,8 +574,7 @@ var questions = [
     answer: "The Brandenburg Gate is located in Berlin, Germany. It is considered one of the most famous landmarks in Germany and one of the most important landmarks of European history. It was built in the 18th century and it served as a symbol of peace and unity during the Cold War. The Brandenburg Gate is a UNESCO World Heritage Site and it is a popular tourist destination in Berlin, attracting millions of visitors every year."
 
     },
-        
-    
+            
     {
 
     category: "Architecture",
@@ -426,27 +598,6 @@ var questions = [
     answer: "The Sydney Opera House, located in Sydney, Australia, was designed by Danish architect Jørn Utzon. The design of the building was the result of an international competition in 1957, and construction began in 1959. The building was officially opened in 1973, and it is considered one of the most iconic buildings of the 20th century. The Sydney Opera House is a UNESCO World Heritage Site and it's considered one of the most famous architectural landmarks in the world."
 
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
 
 ];
 
