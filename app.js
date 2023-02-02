@@ -1,3 +1,4 @@
+// when the start button is clicked the start function is activated
 $("#start").click(start);
 
 var currentQuestion = 0;
@@ -17,12 +18,12 @@ function fisherYatesShuffle(array) {
 function generate() {
     $('#next').hide();
     $('body').append('<img>');
-    $('img').attr('src', questions[currentQuestion].imageUrl);
+    $('img').attr('src', questions[currentQuestion].image_url);
     $('#question').text(questions[currentQuestion].question);
     $('#category').text(questions[currentQuestion].category);
 
     for (var i = 0; i < questions[currentQuestion].choices.length; i++) {
-        $('#questions_ul').append('<li>' + '<input type="radio">' + questions[currentQuestion].choices[i]);
+        $('#choices_ul').append('<li>' + '<input type="radio">' + questions[currentQuestion].choices[i]);
     }
     tries+=1;
 }
@@ -30,22 +31,22 @@ function generate() {
 function correctAnswer() {
     score += 1;
     $('#score').text('Your score: ' + score + '/' + tries );
-    $('#answer_view').css({'color': 'green', 'text-align': 'center'});
-    $('#answer_view').text("Correct!");
-    $('#answer').text(questions[currentQuestion].answer);
+    $('#verdict').css({'color': 'green', 'text-align': 'center'});
+    $('#verdict').text("Correct!");
+    $('#explanation').text(questions[currentQuestion].explanation);
     $('#next_question').html('<button id="next">Next Question</button>');
     $('#restart_game').html('<button id="restart">Restart Game</button>');
     $('#question').empty();
-    $('#questions_ul').empty();
+    $('#choices_ul').empty();
     $('img').remove();
     $('body').append('<img>');
-    $('img').attr('src', questions[currentQuestion].correctUrl);
+    $('img').attr('src', questions[currentQuestion].image_url_2);
 }
 
 $('#next_question').click(function() {
     currentQuestion += 1;
-    $('#answer_view').empty();
-    $('#answer').empty();
+    $('#verdict').empty();
+    $('#explanation').empty();
     $('img').remove();
     generate();
 
@@ -59,36 +60,41 @@ $('#restart_game').click(function() {
 
 function incorrectAnswer() {
 
-    $('#answer_view').css({'color': 'red', 'text-align': 'center'});
-    $('#answer_view').text("Incorrect!");
-    $('#answer').text(questions[currentQuestion].answer);
+    $('#verdict').css({'color': 'red', 'text-align': 'center'});
+    $('#verdict').text("Incorrect!");
+    $('#explanation').text(questions[currentQuestion].explanation);
     $('#score').text('Your score: ' + score + '/' + tries );
     $('#next_question').html('<button id="next">Next Question</button>');
     $('#restart_game').html('<button id="restart">Restart Game</button>');
     $('#question').empty();
-    $('#questions_ul').empty();
+    $('#choices_ul').empty();
     $('img').remove();
     $('body').append('<img>');
-    $('img').attr('src', questions[currentQuestion].correctUrl);     
+    $('img').attr('src', questions[currentQuestion].image_url_2);     
 }
 
+//validates users answers and also checks if currentQuestion is the last question 
 function validate(input) {
-    console.log(currentQuestion + " > " + (questions.length - 1));
     if (currentQuestion === (questions.length - 1)) {
         if(questions[currentQuestion].correctAnswer === input) {
-        $('#score_view').text('Game Over');
+        $('#gameover_message').text('Game Over');
         correctAnswer();
         $('#next').hide();
         return;
     } else {
         incorrectAnswer();
-        $('#score_view').text('Game Over');
+        $('#gameover_message').text('Game Over');
         $('#next').hide();
         return;
     }
 }
 
-    questions[currentQuestion].correctAnswer === input ? (correctAnswer()) : (incorrectAnswer());
+    if (questions[currentQuestion].correctAnswer === input) {
+            correctAnswer();
+        } 
+    else {
+            incorrectAnswer();
+        }
 
 }
 
@@ -101,7 +107,8 @@ function start() {
     $('#score').text('Your score: ' + score + '/' + tries );
     generate();
 
-    $('#questions_ul').on('click', 'li', function() {
+    //calls the validate function using the choice for the answer the user has selected
+    $('#choices_ul').on('click', 'li', function() {
         validate($(this).text());
 
     });
