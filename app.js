@@ -5,6 +5,7 @@ var currentQuestion = 0;
 var score = 0;
 var tries = 0;
 
+//randomizes the question order
 function fisherYatesShuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -13,8 +14,26 @@ function fisherYatesShuffle(array) {
     return array;
   }
   
-  fisherYatesShuffle(questions);
-  
+fisherYatesShuffle(questions);
+
+//this function is called when the start button from the index page is clicked
+function start() {
+
+    
+    $('#welcome').hide();
+    $('#start').hide();
+    $('#opening_pic').hide();
+    $('#score').text('Your score: ' + score + '/' + tries );
+    generate();
+
+    //calls the validate function using the choice for the answer the user has selected
+    $('#choices_ul').on('click', 'li', function() {
+        validate($(this).text());
+
+    });
+}
+
+//populates/generates our questions
 function generate() {
     $('#next').hide();
     $('body').append('<img>');
@@ -28,52 +47,7 @@ function generate() {
     tries+=1;
 }
 
-function correctAnswer() {
-    score += 1;
-    $('#score').text('Your score: ' + score + '/' + tries );
-    $('#verdict').css({'color': 'green', 'text-align': 'center'});
-    $('#verdict').text("Correct!");
-    $('#explanation').text(questions[currentQuestion].explanation);
-    $('#next_question').html('<button id="next">Next Question</button>');
-    $('#restart_game').html('<button id="restart">Restart Game</button>');
-    $('#question').empty();
-    $('#choices_ul').empty();
-    $('img').remove();
-    $('body').append('<img>');
-    $('img').attr('src', questions[currentQuestion].image_url_2);
-}
-
-$('#next_question').click(function() {
-    currentQuestion += 1;
-    $('#verdict').empty();
-    $('#explanation').empty();
-    $('img').remove();
-    generate();
-
-});
-
-$('#restart_game').click(function() {
-    location.replace("index.html");
-
-
-});
-
-function incorrectAnswer() {
-
-    $('#verdict').css({'color': 'red', 'text-align': 'center'});
-    $('#verdict').text("Incorrect!");
-    $('#explanation').text(questions[currentQuestion].explanation);
-    $('#score').text('Your score: ' + score + '/' + tries );
-    $('#next_question').html('<button id="next">Next Question</button>');
-    $('#restart_game').html('<button id="restart">Restart Game</button>');
-    $('#question').empty();
-    $('#choices_ul').empty();
-    $('img').remove();
-    $('body').append('<img>');
-    $('img').attr('src', questions[currentQuestion].image_url_2);     
-}
-
-//validates users answers and also checks if currentQuestion is the last question 
+//checks whether the user has selected the correct or wrong choice and also checks if currentQuestion is the last question 
 function validate(input) {
     if (currentQuestion === (questions.length - 1)) {
         if(questions[currentQuestion].correctAnswer === input) {
@@ -98,22 +72,55 @@ function validate(input) {
 
 }
 
-function start() {
-
-    
-    $('#welcome').hide();
-    $('#start').hide();
-    $('#opening_pic').hide();
+//if the user selects the correct choice
+function correctAnswer() {
+    score += 1;
     $('#score').text('Your score: ' + score + '/' + tries );
-    generate();
-
-    //calls the validate function using the choice for the answer the user has selected
-    $('#choices_ul').on('click', 'li', function() {
-        validate($(this).text());
-
-    });
+    $('#verdict').css({'color': 'green', 'text-align': 'center'});
+    $('#verdict').text("Correct!");
+    $('#explanation').text(questions[currentQuestion].explanation);
+    $('#next_question').html('<button id="next">Next Question</button>');
+    $('#restart_game').html('<button id="restart">Restart Game</button>');
+    $('#question').empty();
+    $('#choices_ul').empty();
+    $('img').remove();
+    $('body').append('<img>');
+    $('img').attr('src', questions[currentQuestion].image_url_2);
 }
 
+//if the user selects the wrong choice
+function incorrectAnswer() {
+
+    $('#verdict').css({'color': 'red', 'text-align': 'center'});
+    $('#verdict').text("Incorrect!");
+    $('#explanation').text(questions[currentQuestion].explanation);
+    $('#score').text('Your score: ' + score + '/' + tries );
+    $('#next_question').html('<button id="next">Next Question</button>');
+    $('#restart_game').html('<button id="restart">Restart Game</button>');
+    $('#question').empty();
+    $('#choices_ul').empty();
+    $('img').remove();
+    $('body').append('<img>');
+    $('img').attr('src', questions[currentQuestion].image_url_2);     
+}
+
+
+//when next question button is clicked
+$('#next_question').click(function() {
+    currentQuestion += 1;
+    $('#verdict').empty();
+    $('#explanation').empty();
+    $('img').remove();
+    generate();
+
+});
+
+//when restart game button is clicked
+$('#restart_game').click(function() {
+    location.replace("index.html");
+
+
+});
 
 
 
