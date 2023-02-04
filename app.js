@@ -1,7 +1,7 @@
 // when the start button is clicked the start function is activated
 $("#start").click(start);
 
-var currentQuestion = 0;
+var currentQuestion = 1;
 var score = 0;
 var tries = 0;
 
@@ -49,7 +49,9 @@ function generate() {
 
 //checks whether the user has selected the correct or wrong choice and also checks if currentQuestion is the last question 
 function validate(input) {
-    if (currentQuestion === (questions.length - 1)) {
+    
+    //if (currentQuestion === (5)) {
+    if (currentQuestion === (questions.length)) {
         if(questions[currentQuestion].correctAnswer === input) {
         $('#gameover_message').text('Game Over');
         correctAnswer();

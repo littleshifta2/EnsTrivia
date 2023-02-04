@@ -53,5 +53,8 @@ img {
     text-align: center; 
   }
 
+#gameover_message {
+color: red;
+}
 
 
