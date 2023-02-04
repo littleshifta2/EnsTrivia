@@ -72,7 +72,7 @@ function validate(input) {
 
 }
 
-//if the user selects the correct choice
+//if the user selects the correct choice the funciton below is called
 function correctAnswer() {
     score += 1;
     $('#score').text('Your score: ' + score + '/' + tries );
@@ -88,7 +88,7 @@ function correctAnswer() {
     $('img').attr('src', questions[currentQuestion].image_url_2);
 }
 
-//if the user selects the wrong choice
+//if the user selects the wrong choice the function below is called
 function incorrectAnswer() {
 
     $('#verdict').css({'color': 'red', 'text-align': 'center'});

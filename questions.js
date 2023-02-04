@@ -1,3 +1,4 @@
+//an array of all our 50 questions 
 var questions = [
 
     {
