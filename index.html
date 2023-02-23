@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<title>Mypage - Join The Revolution</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Ens Trivia Quiz</title>
-    <link rel="icon" type="image/x-icon" href="assets/fav_180.png">
+		<link rel="stylesheet" href="assets/css/fontello.css">
+		<link rel="stylesheet" href="assets/css/shinomiya.css">
+		<link rel="icon" type="image/x-icon" href="assets/img/logo_square-removebg-preview.png">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Your very own website utilizing the shinomiya template">
+    	<meta name="keywords" content="put,your,tags,here">
+    	<meta name="author" content="Your name">
+    	<meta name="twitter:card" content="summary">
+    	<meta name="twitter:creator" content="@yourtwittertag">
+    	<meta property="og:url" content="https://yourdomain.com/">
+    	<meta property="og:title" content="Your name">
+    	<meta property="og:description" content="Your very own website utilizing the shinomiya template">
+    	<meta property="og:image" content="https://yourdomain.com/assets/img/shinomiya.png" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="box box-avatar">
+				<img src="assets/img/shinomiya.png" class="avatar"><br>
+				<span class="heading" style="color: #2e3192;">mypage</span>
 
-</head>
+				<div class="bio">
 
-<body>
+					<a href="mypage.html" >Learn More</a>
+					
 
-    <div>
-        
-    <h1 id="welcome">Welcome to ENS Trivia Quiz!</h1>
-        
-    </div>
-    
-    <img src= assets/home_logo.png alt="Ens Trivia Quiz" id="opening_pic">
-    <input type="button" id="start" value="Let's Go!">
+				</div>
+			</div>
 
-        <h1 id="category"> </h1>
-        <h1 id="question"></h1>
-        <ul id="choices_ul"></ul>
-        <h3 id="verdict"></h3>
-        <h3 id="explanation"></h3>
-        <div id="score"></div>
-    
-    <div id="gameover_message"></div>
-    <div id="next_question"></div>
-    <div id="restart_game"></div>
+			<div class="headerDivider"></div>
 
-    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-    <script src="questions.js"></script>
-    <script src="app.js"></script>
-    
-</body>
+			<div class="box">
+				<div class="heading">Contact</div>
+				
+						<div> 📧			surafelaramde"at"yahoo"dot"com</div>
 
+				<div class="quote">Join the revolution.</div>
+				<div class="quoteauthor">- Mypage</div>
+			</div>
+		</div>
+
+		<div id="overlay" onclick="hidePopup();"></div>
+
+		<div id="popup">
+			<div class="popupheader">
+				<div class="popupheading">Your message</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" defer>
+			var overlay = document.getElementById("overlay");
+			var popup = document.getElementById("popup");
+
+			function showPopup() {
+				overlay.classList.add("dimpage");
+				setTimeout(function() {
+					popup.classList.add("showpopup");
+				}, 400);
+			}
+
+			// I'm very sorry.
+			function hidePopup() {
+				popup.classList.remove("showpopup");
+				popup.classList.add("hidepopup");
+				setTimeout(function() {
+					popup.classList.remove("hidepopup");
+					overlay.classList.remove("dimpage");
+					overlay.classList.add("undimpage");
+
+					setTimeout(function() {
+						overlay.classList.remove("undimpage");
+					}, 400);
+				}, 400);
+			}
+		</script>
+	</body>
 </html>
+
+
+
+
+
+	
